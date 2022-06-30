@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<ModLinks
+		xmlns="https://github.com/HollowKnight-Modding/HollowKnight.ModLinks/HollowKnight.ModManager"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="https://raw.githubusercontent.com/HollowKnight-Modding/HollowKnight.ModLinks/main/Schemas/ModLinks.xml">
+	<!--
+    <Manifest>
+        <Name>Test Name</Name>
+        <Description>Test description</Description>
+        <Version>0.0.0.0</Version>
+        Only one of these two
+        <Links>
+            <Linux SHA256="0000000000000000000000000000000000000000000000000000000000000000"><![CDATA[https://linux.link]]></Linux>
+            <Mac SHA256="0000000000000000000000000000000000000000000000000000000000000000"><![CDATA[https://mac.link]]></Mac>
+            <Windows SHA256="0000000000000000000000000000000000000000000000000000000000000000"><![CDATA[https://windows.link]]></Windows>
+        </Links>
+            <Link SHA256="0000000000000000000000000000000000000000000000000000000000000000"><![CDATA[https://multiplatform.link]]></Link>
+        <Dependencies>
+            <Dependency>Another mod's name that this mod depends on</Dependency>
+        </Dependencies>
+        <Integrations>
+            <Integration>Another mod's name, like the dependency list, but not a hard dependency, but extra stuff when it is installed alongside</Integration>
+        </Integrations>
+        <Tags>
+            <Tag>Either of: 'Boss', 'Cosmetic', 'Expansion', 'Gameplay', 'Library', 'Utility'</Tag>
+        </Tags>
+    </Manifest>
+    -->
+	<Manifest>
+		<Name2222222222222222222222222222>Better Void Heart</Name2222222222222222222222222222>
+		<Description>Keep Kingsoul soul regen when you pick up Void Heart.</Description>
+		<Version>1.0.0.0</Version>
+		<Link SHA256="73f26fb4a41dccb33eaea87a687a7cf2a26ead8c130a74bcffc7c5ccd96797cc">
+			<![CDATA[https://github.com/epiceuropean/Better-Void-Heart/releases/download/v1.0/Better.Void.Heart.zip]]>
+		</Link>
+		<Dependencies>
+			<Dependency>Satchel</Dependency>
+		</Dependencies>
+		<Repository>
+			<![CDATA[https://github.com/epiceuropean/Better-Void-Heart]]>
+		</Repository>
+		<Tags>
+			<Tag>Gameplay</Tag>
+		</Tags>
+	</Manifest>
+	<Manifest>
+		<Name>RadianceExtras</Name>
+		<Description>Adds Extra Things to the Abs Rad Fight</Description>
+		<Version>1.0.0.0</Version>
+		<Link111111111111111111 SHA256="6FD9808BD0E1A31F315E3A794CA5F322D4AABB55AFFCCB0C2566B0BD585FE973">
+			<![CDATA[https://github.com/Zickles/RadianceExtras/releases/download/1.0.2/RadianceExtras.zip]]>
+		</Link111111111111111111>
+		<Dependencies>
+			<Dependency>Satchel</Dependency>
+		</Dependencies>
+		<Repository>
+			<![CDATA[https://github.com/Zickles/RadianceExtras]]>
+		</Repository>
+		<Tags>
+			<Tag>Boss</Tag>
+		</Tags>
+	</Manifest>
+</ModLinks>
