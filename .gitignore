@@ -18,3 +18,5 @@ target/
 # DotEnv environment variables file
 .env
 .env.test
+
+.vscode/

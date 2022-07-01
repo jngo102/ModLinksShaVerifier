@@ -2,7 +2,10 @@
 name = "modlinks-sha-verifier"
 version = "0.1.0"
 edition = "2021"
-authors = ["Clazex <clazex.y@gmail.com>"]
+authors = [
+    "Clazex <clazex.y@gmail.com>",
+    "jngo102 <jngo102@aim.com>"
+]
 license = "MIT"
 publish = false
 
@@ -16,5 +19,7 @@ serde = { version = "^1.0.137", features = ["derive"] }
 sha2 = "^0.10.2"
 
 [profile.release]
+opt-level = "z"
 lto = true
 codegen-units = 1
+strip = true

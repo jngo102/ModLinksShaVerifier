@@ -9,8 +9,11 @@ pub enum Links {
     Universal(FileDef),
     #[serde(rename = "Links")]
     PlatformDependent {
+        #[serde(rename = "Windows")]
         windows: FileDef,
+        #[serde(rename = "Mac")]
         mac: FileDef,
+        #[serde(rename = "Linux")]
         linux: FileDef,
     },
 }
@@ -39,7 +42,7 @@ impl Links {
                 (
                     r_windows.0 && r_mac.0 && r_linux.0,
                     format!(
-                        "Windows: {}, Mac: {}, Linux: {}",
+                        "Windows: {}\nMac: {}\nLinux\n{}",
                         r_windows.1, r_mac.1, r_linux.1,
                     ),
                 )
