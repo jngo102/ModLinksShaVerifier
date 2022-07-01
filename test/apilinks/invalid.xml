@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<ApiLinks
+    xmlns="https://github.com/HollowKnight-Modding/HollowKnight.ModLinks/HollowKnight.ModManager"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://raw.githubusercontent.com/HollowKnight-Modding/HollowKnight.ModLinks/main/Schemas/ApiLinks.xml"
+>
+    <Manifest>
+        <Version>71</Version>
+
+        <Links>
+            <Linux SHA256="3f5d9689ff3e37177eb1c315bae3bcc7441c2d4f1f7579dc8480afdfb50fc4b3">
+                <![CDATA[https://github.com/hk-modding/api/releases/download/1.5.78.11833-71/ModdingApiLinux.zip]]>
+            </Linux>
+        </Links>
+        
+        <Files>
+            <File>Assembly-CSharp.dll</File>
+            <File>Assembly-CSharp.xml</File>
+            
+            <File>MMHOOK_Assembly-CSharp.dll</File>
+            <File>MMHOOK_PlayMaker.dll</File>
+            
+            <File>Mono.Cecil.dll</File>
+            <File>MonoMod.RuntimeDetour.dll</File>
+            <File>MonoMod.Utils.dll</File>
+            
+            <File>mscorlib.dll</File>
+            
+            <File>Newtonsoft.Json.dll</File>
+        </Files>
+    </Manifest>
+</ApiLinks>

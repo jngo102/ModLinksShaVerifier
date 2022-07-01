@@ -17,13 +17,24 @@ jobs:
       - name: Build
         run: cargo build --release
 
-      - name: Test Correct
+      - name: Test ApiLinks Correct
+        run: ./target/release/modlinks-sha-verifier api ./test/apilinks/correct.xml
+
+      - name: Test ApiLinks Incorrect
+        run: ./target/release/modlinks-sha-verifier api ./test/apilinks/incorrect.xml
+        continue-on-error: true
+
+      - name: Test ApiLinks Invalid
+        run: ./target/release/modlinks-sha-verifier api ./test/apilinks/invalid.xml
+        continue-on-error: true
+
+      - name: Test ModLinks Correct
         run: ./target/release/modlinks-sha-verifier mod ./test/modlinks/correct.xml
 
-      - name: Test Incorrect
+      - name: Test ModLinks Incorrect
         run: ./target/release/modlinks-sha-verifier mod ./test/modlinks/incorrect.xml
         continue-on-error: true
 
-      - name: Test Invalid
+      - name: Test ModLinks Invalid
         run: ./target/release/modlinks-sha-verifier mod ./test/modlinks/invalid.xml
         continue-on-error: true

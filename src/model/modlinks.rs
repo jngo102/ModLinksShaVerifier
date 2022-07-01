@@ -1,7 +1,7 @@
 use rayon::prelude::*;
 use serde::Deserialize;
 
-use super::Links;
+use super::{Links, Verifiable};
 
 #[derive(Debug, Clone, Deserialize, PartialEq, Eq)]
 pub struct ModLinks {
@@ -9,8 +9,8 @@ pub struct ModLinks {
     mods: Vec<Mod>,
 }
 
-impl ModLinks {
-    pub fn verify(&self) -> bool {
+impl Verifiable for ModLinks {
+    fn verify(&self) -> bool {
         let (res, failed_mods) = self
             .mods
             .par_iter()

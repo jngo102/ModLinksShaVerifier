@@ -2,7 +2,10 @@
 name = "modlinks-sha-verifier"
 version = "0.1.0"
 edition = "2021"
-authors = ["Clazex <clazex.y@gmail.com>"]
+authors = [
+    "Clazex <clazex.y@gmail.com>",
+    "jngo102 <jngo102@aim.com>"
+]
 license = "MIT"
 publish = false
 
