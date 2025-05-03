@@ -11,8 +11,8 @@ import (
 	"net/http"
 	"os"
 	"strings"
-	"time"
 	"sync"
+	"time"
 )
 
 func main() {
@@ -62,19 +62,18 @@ func main() {
 		checkedManifests[currentManifest.Name] = currentManifest
 	}
 
-
 	wg := new(sync.WaitGroup)
 	var checkManifestCount int
 	for _, incomingManifest := range incomingModlinks.Manifests {
 		trimManifest(&incomingManifest)
 		if checkedManifest, exists := checkedManifests[incomingManifest.Name]; exists {
 			if checkedManifest != incomingManifest {
-				wg.Add(1);
+				wg.Add(1)
 				go checkManifest(incomingManifest, mainChannel, wg)
 				checkManifestCount++
 			}
 		} else {
-				wg.Add(1);
+			wg.Add(1)
 			go checkManifest(incomingManifest, mainChannel, wg)
 			checkManifestCount++
 		}
@@ -99,7 +98,7 @@ func main() {
 		log.Fatalln("Not all checks were successful.")
 	}
 
-	fmt.Printf("Checked %d mods in %dms\n", checkManifestCount, time.Since(start).Milliseconds())
+	fmt.Printf("Checked %d manifests in %dms\n", checkManifestCount, time.Since(start).Milliseconds())
 }
 
 // Trim any newlines existing in a mod manifest's link URLs.
@@ -121,7 +120,7 @@ func trimManifest(manifest *Manifest) {
 
 // Verify the SHA256 hashes of a single mod manifest's links.
 func checkManifest(manifest Manifest, channel chan bool, wg *sync.WaitGroup) {
-	defer wg.Done();
+	defer wg.Done()
 	fmt.Printf("Checking '%s %+v'\n", manifest.Name, manifest.Links)
 
 	if manifest.Link != (Link{}) {
@@ -149,7 +148,7 @@ func checkManifest(manifest Manifest, channel chan bool, wg *sync.WaitGroup) {
 
 // Verify the SHA256 hash of a single mod manifest link.
 func checkLink(manifestName string, link Link, channel chan bool, wg *sync.WaitGroup) {
-	defer wg.Done();
+	defer wg.Done()
 	url := strings.TrimSpace(link.URL)
 	response, err := http.Get(url)
 	if err != nil {
